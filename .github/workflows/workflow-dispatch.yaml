@@ -11,12 +11,10 @@ jobs:
     name: Validate changed files
     steps:
       - name: step1
-        run: |
-          echo "hello I am job1"
+        run: echo "hello I am job1"
   job2:
     runs-on: ubuntu-latest
     name: Job2
     steps:
       - name: step2
-        run: |
-          echo "$(date)"
+        run: echo "$(date)"
