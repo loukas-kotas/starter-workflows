@@ -1,4 +1,4 @@
-  debugging:
-    on:
-      workflow_fispatch:
+  name: Workflow Dispatch
+  on:
+    workflow_dispatch:
 
