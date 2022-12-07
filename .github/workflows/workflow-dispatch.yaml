@@ -1,0 +1,22 @@
+name: Workflow Dispatch
+  on:
+    workflow_dispatch:
+      inputs:
+        branch: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+  jobs:
+    any_name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test step
+        shell: bash
+        run: |
+          echo "GH_REPO: $GH_REPO"
+          echo "GH_REPO_0: $GH_REPO_0"
+          echo "GH_T: $GH_T"
