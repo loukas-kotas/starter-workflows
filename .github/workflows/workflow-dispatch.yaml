@@ -7,7 +7,12 @@ on:
   
 jobs:
   job1:
+    name: Job1
     runs-on: ubuntu-latest
+    steps:
+      - name: Setup Jobs
+        run: |
+          echo "hello"
 #   job1:
 #     runs-on: ubuntu-latest
 #     name: Validate changed files
