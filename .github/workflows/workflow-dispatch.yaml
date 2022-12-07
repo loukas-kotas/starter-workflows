@@ -19,4 +19,4 @@ jobs:
     steps:
       - name: step2
         run: |
-          echo "hello I am job2"
+          echo "$(date +'%Y-%m-%d')"
