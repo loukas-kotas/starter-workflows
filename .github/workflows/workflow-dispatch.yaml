@@ -1,7 +1,22 @@
-  name: Workflow Dispatch
-  
-  on:
-    schedule:
-      - cron: "14 13 * * *" # Runs at 00:00 UTC every day.
-    workflow_dispatch:
+name: Workflow Dispatch
 
+on:
+  schedule:
+    - cron: "25 13 * * *" # Runs at 00:00 UTC every day.
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    name: Validate changed files
+    steps:
+      - name: step1
+        run: |
+          echo "hello I am job1"
+  job2:
+    runs-on: ubuntu-latest
+    name: Job2
+    steps:
+      - name: step2
+        run: |
+          echo "hello I am job2"
