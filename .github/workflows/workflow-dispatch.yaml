@@ -1,4 +1,7 @@
   name: Workflow Dispatch
+  
   on:
+    schedule:
+      - cron: "14 13 * * *" # Runs at 00:00 UTC every day.
     workflow_dispatch:
 
